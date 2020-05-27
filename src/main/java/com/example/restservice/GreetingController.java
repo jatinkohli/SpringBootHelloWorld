@@ -19,7 +19,7 @@ public class GreetingController {
 	}
 
 	@PostMapping("/greetingNQ")
-	public Greeting greetingWithoutQuery(@RequestParam(value = "name", defaultValue = "World") String name) {
+	public Greeting greetingWithoutQuery(@RequestParam(value = "name") String name) {
 		return new Greeting(counterNQ.getAndIncrement(), "Hello, " + name + "!");
 	}
 }
